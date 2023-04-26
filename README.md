@@ -11,5 +11,8 @@ Advanced Settings에서 Allow auto-make to start even if developed application�
 3. Thymeleaf 페이지 레이아웃 오류  
 Thymeleaf Layout Dialect dependency를 pom.xml에 추가한후 footer와 header 등의 공통 페이지 구성요소를 이용하여 페이지 레이아웃 기능을  
 사용하였지만, 애플리케이션 실행 결과 출력이 제대로 되지 않았다.  
-[해결방법: 의존성 부분에서 버전을 삭제하였더니 해결이 되었다..!(2.5.1 버전을 추가했었던 상태였다)]
-  
+[해결방법: 의존성 부분에서 버전을 삭제하였더니 해결이 되었다..!(2.5.1 버전을 추가했었던 상태였다)]  
+
+4. 스프링 시큐리티의 WebSecurityConfigurerAdapter Deprecated 오류  
+최신 버전의 스프링 시큐리티에서는 WebSecurityConfigurerAdapter가 Deprecated처리 된다.  
+[해결방법: SecurityFilterChain을 Bean으로 등록하여 사용해야한다. 즉, 개발자가 커스텀할 설정들을 직접 @Bean으로 등록하여 사용해야한다.)
