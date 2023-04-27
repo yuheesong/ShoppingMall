@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name="order")
+@Table(name="orders")
 @Getter @Setter
 public class Order {
 
@@ -27,7 +27,7 @@ public class Order {
     @Enumerated(EnumType.STRING)
     private OrderStatus orderStatus;  //주문상태
 
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderItem> orderItems = new ArrayList<>();
 
     private LocalDateTime regTime;
