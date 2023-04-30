@@ -16,3 +16,8 @@ Thymeleaf Layout Dialect dependency를 pom.xml에 추가한후 footer와 header 
 4. 스프링 시큐리티의 WebSecurityConfigurerAdapter Deprecated 오류  
 최신 버전의 스프링 시큐리티에서는 WebSecurityConfigurerAdapter가 Deprecated처리 된다.  
 [해결방법: SecurityFilterChain을 Bean으로 등록하여 사용해야한다. 즉, 개발자가 커스텀할 설정들을 직접 @Bean으로 등록하여 사용해야한다.)
+  
+5. QueryDsl의 fetchResults() deprecated 오류  
+fetchResults()는 QueryResults를 사용하고, 여기서 count 쿼리를 사용한다.  
+그러나 QueryDsl 5.0.0 버전부터는 fetchResults()와 fetchCount()가 deprecated된다.  
+[해결방법: 카운트할 때 fetchResults() 대신 fetch()를 사용한다. 또한, QueryResults를 List 타입으로 바꿔준다.]  
