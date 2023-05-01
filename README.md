@@ -25,5 +25,5 @@ fetchResults()는 QueryResults를 사용하고, 여기서 count 쿼리를 사용
 # 참고  
 1. 깃허브를 이용하여 데이터 파일들을 git의 형상관리 형태로 관리하기  
 AWS 같은 서버 원격 저장소 없이도 데이터를 저장하고 활용할 수 있다.
-http://raw.githubusercontent.com/{owner이름}/{레포지토리이름}/{branch이름}/{파일 경로}의 URI형태를 이용하면 된다.    
+http://raw.githubusercontent.com/{owner이름}/{레포지토리이름}/{branch이름}/{파일 경로}의 URI형태를 이용하면 된다. (단, 레포지토리는 public이어야 한다.)
 혹은, 쉽게 이용하는 방법으로는 레포지토리에 파일을 저장한후 마우스 오른쪽 클릭을 하여 새탭에서 파일을 열어주었다. 그러면 URI 주소가 상단에 뜨는데, 이를 복사하여 코드에 활용하였다.  
