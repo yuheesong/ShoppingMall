@@ -1,4 +1,17 @@
-# 오류  
+# 제목  
+### 설명  
+
+## 1. 기간  
+
+## 2. 사용 기술  
+- Java 11  
+- Spring Boot 2.7.11  
+- Maven 4.0.0  
+- BootStrap 5.3.0  
+
+## 3. 핵심 기능  
+## 4. 회고/느낀점  
+## 5. 오류  
 1. com.mysema.codegen.model.Type 오류  
 이 오류가 발생하며 Q클래스가 만들어지지 않았다.  
 [해결방법:메이븐 사용 기준으로, <dependencies></dependencies> 사이에 넣은 querydsl 의존성 관련된 버전 부분을 주석처리 해준다.  
