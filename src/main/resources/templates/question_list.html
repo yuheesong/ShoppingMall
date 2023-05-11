@@ -1,18 +1,41 @@
 <html layout:decorate="~{layouts/layout1}">
 <div layout:fragment="content" class="container my-3">
+  <th:block layout:fragment="css">
+    <style>
+      .page-link {
+        color: #000;
+        background-color: #fff;
+        border: 1px solid #ccc;
+      }
+      .page-item.active .page-link {
+        z-index: 1;
+        color: #555;
+        font-weight:bold;
+        background-color: #f1f1f1;
+        border-color: #ccc;
+
+      }
+      .page-link:focus, .page-link:hover {
+        color: #000;
+        background-color: #fafafa;
+        border-color: #ccc;
+      }
+    </style>
+  </th:block>
+
   <table class="table">
-    <thead class="table-dark">
+    <thead>
       <tr>
-        <th>번호</th>
-        <th>제목</th>
-        <th>작성일시</th>
+        <td>번호</td>
+        <td>제목</td>
+        <td>작성일시</td>
       </tr>
     </thead>
     <tbody>
       <tr th:each="question, loop : ${paging}">
         <td th:text="${paging.getTotalElements - (paging.number * paging.size) - loop.index}"></td>
         <td>
-          <a th:href="@{|/question/detail/${question.id}|}" th:text="${question.subject}"></a>
+          <a th:href="@{|/question/detail/${question.id}|}" th:text="${question.subject}" style="color:#4169E1"></a>
           <span class="text-danger small ms-2"
                 th:if="${#lists.size(question.answerList) > 0}"
                 th:text="${#lists.size(question.answerList)}">
@@ -45,6 +68,6 @@
     </ul>
   </div>
   <!-- 페이징처리 끝 -->
-  <a th:href="@{/question/create}" class="btn btn-primary">질문 등록하기</a>
+  <a th:href="@{/question/create}" class="btn btn-secondary">질문 등록하기</a>
 </div>
 </html>

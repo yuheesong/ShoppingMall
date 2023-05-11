@@ -55,7 +55,7 @@
 
   <form role="form" method="post" enctype="multipart/form-data" th:object="${itemFormDto}">
 
-    <p class="h2">
+    <p class="h3">
       상품 등록
     </p>
 
@@ -120,7 +120,7 @@
     </div>
 
     <div th:if="${#strings.isEmpty(itemFormDto.id)}" style="text-align: center">
-      <button th:formaction="@{/admin/item/new}" type="submit" class="btn btn-danger">저장</button>
+      <button th:formaction="@{/admin/item/new}" type="submit" class="btn btn-secondary">저장</button>
     </div>
     <div th:unless="${#strings.isEmpty(itemFormDto.id)}" style="text-align: center">
       <button th:formaction="@{'/admin/item/' + ${itemFormDto.id} }" type="submit" class="btn btn-danger">수정</button>
