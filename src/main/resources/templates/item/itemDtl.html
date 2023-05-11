@@ -179,7 +179,7 @@
                 <button type="button" class="btn btn-secondary" onclick="order()">주문하기</button>
             </div>
             <div th:unless="${item.itemSellStatus == T(com.shop.constant.ItemSellStatus).SELL}" class="text-right">
-                <button type="button" class="btn btn-danger btn-lg">품절</button>
+                <button type="button" class="btn btn-danger disabled">품절</button>
             </div>
         </div>
     </div>
