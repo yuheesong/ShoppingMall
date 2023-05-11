@@ -21,6 +21,7 @@ class ShopApplicationTests {
 
 	@Autowired
 	private QuestionRepository questionRepository;
+	@Autowired
 	private AnswerRepository answerRepository;
 
 
