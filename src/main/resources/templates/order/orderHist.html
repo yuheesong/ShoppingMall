@@ -82,25 +82,43 @@
         .fs24{
             font-size:24px
         }
+        .page-link {
+            color: #000;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+        .page-item.active .page-link {
+            z-index: 1;
+            color: #555;
+            font-weight:bold;
+            background-color: #f1f1f1;
+            border-color: #ccc;
+
+        }
+        .page-link:focus, .page-link:hover {
+            color: #000;
+            background-color: #fafafa;
+            border-color: #ccc;
+        }
     </style>
 </th:block>
 
 <div layout:fragment="content" class="content-mg">
 
-    <h2 class="mb-4">
+    <h3 class="mb-4">
         구매 이력
-    </h2>
+    </h3>
 
     <div th:each="order : ${orders.getContent()}">
 
         <div class="d-flex mb-3 align-self-center">
-            <h4 th:text="${order.orderDate} + ' 주문'"></h4>
+            <h6 th:text="${order.orderDate} + ' 주문'"></h6>
             <div class="ml-3">
                 <th:block th:if="${order.orderStatus == T(com.shop.constant.OrderStatus).ORDER}">
-                    <button type="button" class="btn btn-outline-secondary" th:value="${order.orderId}" onclick="cancelOrder(this.value)">주문취소</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary mt-n2" th:value="${order.orderId}" onclick="cancelOrder(this.value)">주문취소</button>
                 </th:block>
                 <th:block th:unless="${order.orderStatus == T(com.shop.constant.OrderStatus).ORDER}">
-                    <h4>(취소 완료)</h4>
+                    <h6>(취소 완료)</h6>
                 </th:block>
             </div>
         </div>
