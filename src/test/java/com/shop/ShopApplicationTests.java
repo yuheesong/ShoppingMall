@@ -4,6 +4,7 @@ import com.shop.answer.Answer;
 import com.shop.answer.AnswerRepository;
 import com.shop.question.Question;
 import com.shop.question.QuestionRepository;
+import com.shop.question.QuestionService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,8 @@ class ShopApplicationTests {
 	private QuestionRepository questionRepository;
 	@Autowired
 	private AnswerRepository answerRepository;
+	@Autowired
+	private QuestionService questionService;
 
 
 
@@ -134,5 +137,15 @@ class ShopApplicationTests {
 		assertTrue(oa.isPresent());
 		Answer b = oa.get();
 		assertEquals(2, b.getQuestion().getId());
+	}
+
+	@Test
+	@DisplayName("대량 데이터 생성 테스트")
+	void testJpa10() {
+		for (int i = 1; i <= 300; i++) {
+			String subject = String.format("테스트 데이터입니다:[%03d]", i);
+			String content = "내용무";
+			this.questionService.create(subject, content);
+		}
 	}
 }
