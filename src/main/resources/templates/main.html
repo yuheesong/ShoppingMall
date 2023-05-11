@@ -31,6 +31,26 @@
             width: 100%;
             height: 100%;
         }
+        .page-link {
+            color: #000;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+
+        .page-item.active .page-link {
+            z-index: 1;
+            color: #555;
+            font-weight:bold;
+            background-color: #f1f1f1;
+            border-color: #ccc;
+
+        }
+
+        .page-link:focus, .page-link:hover {
+            color: #000;
+            background-color: #fafafa;
+            border-color: #ccc;
+        }
     </style>
 </th:block>
 
@@ -46,7 +66,7 @@
 
     <input type="hidden" name="searchQuery" th:value="${itemSearchDto.searchQuery}">
     <div th:if="${not #strings.isEmpty(itemSearchDto.searchQuery)}" class="center">
-        <p class="h3 font-weight-bold" th:text="${itemSearchDto.searchQuery} + '검색 결과'"></p>
+        <p class="h4 font-weight-bold" th:text="${itemSearchDto.searchQuery} + '검색 결과'"></p>
     </div>
 
     <div class="row">
@@ -56,9 +76,9 @@
                     <a th:href="'/item/' +${item.id}" class="text-dark">
                         <img th:src="${item.imgUrl}" class="card-img-top" th:alt="${item.itemNm}" height="250">
                         <div class="card-body">
-                            <h4 class="card-title">[[${item.itemNm}]]</h4>
+                            <h5 class="card-title">[[${item.itemNm}]]</h5>
                             <p class="card-text">[[${item.itemDetail}]]</p>
-                            <h3 class="card-title text-danger">[[${item.price}]]원</h3>
+                            <h5 class="card-title text-danger">[[${item.price}]]원</h5>
                         </div>
                     </a>
                 </div>
