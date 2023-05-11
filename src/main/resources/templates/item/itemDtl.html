@@ -147,7 +147,7 @@
             <img th:src="${item.itemImgDtoList[0].imgUrl}" class = "rounded repImg" th:alt="${item.itemNm}">
         </div>
         <div class="wd50">
-            <span th:if="${item.itemSellStatus == T(com.shop.constant.ItemSellStatus).SELL}" class="badge badge-dark mgb-15">
+            <span th:if="${item.itemSellStatus == T(com.shop.constant.ItemSellStatus).SELL}" style="background-color: #6ea8fe" class="badge badge-dark mgb-15">
                 판매중
             </span>
             <span th:unless="${item.itemSellStatus == T(com.shop.constant.ItemSellStatus).SELL}" class="badge btn-danger mgb-15" >
@@ -172,11 +172,11 @@
 
             <div class="text-right mgt-50">
                 <h5>결제 금액</h5>
-                <h3 name="totalPrice" id="totalPrice" class="font-weight-bold"></h3>
+                <h4 name="totalPrice" id="totalPrice" class="font-weight-bold"></h4>
             </div>
             <div th:if="${item.itemSellStatus == T(com.shop.constant.ItemSellStatus).SELL}" class="text-right">
-                <button type="button" class="btn btn-light border border-warning btn-lg" onclick="addCart()">장바구니 담기</button>
-                <button type="button" class="btn btn-warning btn-lg" onclick="order()">주문하기</button>
+                <button type="button" class="btn btn-light border " onclick="addCart()">장바구니 담기</button>
+                <button type="button" class="btn btn-secondary" onclick="order()">주문하기</button>
             </div>
             <div th:unless="${item.itemSellStatus == T(com.shop.constant.ItemSellStatus).SELL}" class="text-right">
                 <button type="button" class="btn btn-danger btn-lg">품절</button>
@@ -184,11 +184,11 @@
         </div>
     </div>
 
-    <div class="jumbotron jumbotron-fluid mgt-30">
+    <div class="jumbotron jumbotron-fluid mgt-30" style="background-color: whitesmoke;">
         <div class="container">
-            <h4 class="display-5">상품 상세 설명</h4>
+            <h5 class="display-5">상품 상세 설명</h5>
             <hr class="my-4">
-            <p class="lead" th:text="${item.itemDetail}"></p>
+            <p class="lead" th:text="${item.itemDetail}" style="font-size: medium"></p>
         </div>
     </div>
 
