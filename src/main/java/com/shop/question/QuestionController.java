@@ -9,6 +9,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.security.Principal;
 import java.util.List;
 
 @RequestMapping("/question")
@@ -35,11 +36,12 @@ public class QuestionController {
         return "question_form";
     }
     @PostMapping("/create")
-    public String questionCreate(@Valid QuestionForm questionForm, BindingResult bindingResult) {
+    public String questionCreate(@Valid QuestionForm questionForm, BindingResult bindingResult,
+                                 Principal principal) {
         if (bindingResult.hasErrors()) {
             return "question_form";
         }
-        this.questionService.create(questionForm.getSubject(), questionForm.getContent());
+        this.questionService.create(questionForm.getSubject(), questionForm.getContent(), principal.getName());
         return "redirect:/question/list"; // 질문 저장후 질문목록으로 이동
     }
 }
