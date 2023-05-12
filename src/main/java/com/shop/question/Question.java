@@ -28,4 +28,6 @@ public class Question {
     private List<Answer> answerList;
 
     private String author;
+
+    private LocalDateTime modifyDate;
 }
