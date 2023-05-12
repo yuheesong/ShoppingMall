@@ -8,6 +8,7 @@
 - Spring Boot 2.7.11  
 - Maven 4.0.0  
 - BootStrap 5.3.0  
+- HTML
 
 ## 3. 핵심 기능  
 ## 4. 회고/느낀점  
