@@ -11,14 +11,14 @@ import java.util.List;
 public interface OrderRepository extends JpaRepository<Order, Long> {
 
     @Query("select o from Order o " +
-    "where o.member.email = :email " +
+    "where o.member.name = :name " +
     "order by o.orderDate desc"
     )
-    List<Order> findOrders(@Param("email") String email, Pageable pageable);
+    List<Order> findOrders(@Param("name") String name, Pageable pageable);
 
     @Query("select count(o) from Order o " +
-    "where o.member.email = :email"
+    "where o.member.name = :name"
     )
-    Long countOrder(@Param("email") String email);
+    Long countOrder(@Param("name") String name);
 
 }

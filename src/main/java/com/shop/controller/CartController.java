@@ -36,11 +36,11 @@ public class CartController {
             return new ResponseEntity<String>
                     (sb.toString(), HttpStatus.BAD_REQUEST);
         }
-        String email = principal.getName();
+        String name = principal.getName();
         Long cartItemId;
 
         try{
-            cartItemId = cartService.addCart(cartItemDto, email);
+            cartItemId = cartService.addCart(cartItemDto, name);
         }catch (Exception e){
             return new ResponseEntity<String>(e.getMessage(),
                     HttpStatus.BAD_REQUEST);

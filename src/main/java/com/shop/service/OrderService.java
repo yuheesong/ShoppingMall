@@ -29,10 +29,10 @@ public class OrderService {
     private final OrderRepository orderRepository;
     private final ItemImgRepository itemImgRepository;
 
-    public Long order(OrderDto orderDto, String email){
+    public Long order(OrderDto orderDto, String name){
         Item item = itemRepository.findById(orderDto.getItemId())
                 .orElseThrow(EntityNotFoundException::new);
-        Member member = memberRepository.findByEmail(email);
+        Member member = memberRepository.findByName(name);
         List<OrderItem> orderItemList =  new ArrayList<>();
         OrderItem orderItem = OrderItem.createOrderItem(item, orderDto.getCount());
         orderItemList.add(orderItem);
@@ -44,9 +44,9 @@ public class OrderService {
     }
 
     @Transactional(readOnly = true)
-    public Page<OrderHistDto> getOrderList(String email, Pageable pageable){
-        List<Order> orders = orderRepository.findOrders(email, pageable);
-        Long totalCount = orderRepository.countOrder(email);
+    public Page<OrderHistDto> getOrderList(String name, Pageable pageable){
+        List<Order> orders = orderRepository.findOrders(name, pageable);
+        Long totalCount = orderRepository.countOrder(name);
 
         List<OrderHistDto> orderHistDtos = new ArrayList<>();
 
@@ -66,13 +66,13 @@ public class OrderService {
     }
 
     @Transactional(readOnly = true)
-    public boolean validateOrder(Long orderId, String email){
-        Member curMember = memberRepository.findByEmail(email);
+    public boolean validateOrder(Long orderId, String name){
+        Member curMember = memberRepository.findByName(name);
         Order order = orderRepository.findById(orderId)
                 .orElseThrow(EntityNotFoundException::new);
         Member savedMember = order.getMember();
 
-        if(!StringUtils.equals(curMember.getEmail(), savedMember.getEmail())){
+        if(!StringUtils.equals(curMember.getName(), savedMember.getName())){
     return false;
         }
         return true;
@@ -84,8 +84,8 @@ public class OrderService {
         order.cancelOrder();
     }
 
-    public Long orders(List<OrderDto> orderDtoList, String email){
-        Member member = memberRepository.findByEmail(email);
+    public Long orders(List<OrderDto> orderDtoList, String name){
+        Member member = memberRepository.findByName(name);
         List<OrderItem> orderItemList = new ArrayList<>();
         for(OrderDto orderDto : orderDtoList){
             Item item = itemRepository.findById(orderDto.getItemId())
