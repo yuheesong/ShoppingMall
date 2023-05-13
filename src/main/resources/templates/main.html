@@ -76,9 +76,9 @@
                     <a th:href="'/item/' +${item.id}" class="text-dark">
                         <img th:src="${item.imgUrl}" class="card-img-top" th:alt="${item.itemNm}" height="250">
                         <div class="card-body">
-                            <h5 class="card-title">[[${item.itemNm}]]</h5>
+                            <h6 class="card-title">[[${item.itemNm}]]</h6>
                             <p class="card-text">[[${item.itemDetail}]]</p>
-                            <h5 class="card-title text-danger">[[${item.price}]]원</h5>
+                            <h6 class="card-title text-danger">[[${item.price}]]원</h6>
                         </div>
                     </a>
                 </div>
@@ -87,7 +87,7 @@
     </div>
 
     <div th:with="start=${(items.number/maxPage)*maxPage + 1}, end=(${(items.totalPages == 0) ? 1 : (start + (maxPage - 1) < items.totalPages ? start + (maxPage - 1) : items.totalPages)})" >
-        <ul class="pagination justify-content-center">
+        <ul class="pagination justify-content-center mt-2">
 
             <li class="page-item" th:classappend="${items.number eq 0}?'disabled':''">
                 <a th:href="@{'/' + '?searchQuery=' + ${itemSearchDto.searchQuery} + '&page=' + ${items.number-1}}" aria-label='Previous' class="page-link">

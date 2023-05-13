@@ -171,12 +171,12 @@
             <hr class="my-4">
 
             <div class="text-right mgt-50">
-                <h5>결제 금액</h5>
-                <h4 name="totalPrice" id="totalPrice" class="font-weight-bold"></h4>
+                <h6>결제 금액</h6>
+                <h5 name="totalPrice" id="totalPrice" class="font-weight-bold"></h5>
             </div>
             <div th:if="${item.itemSellStatus == T(com.shop.constant.ItemSellStatus).SELL}" class="text-right">
-                <button type="button" class="btn btn-light border " onclick="addCart()">장바구니 담기</button>
-                <button type="button" class="btn btn-secondary" onclick="order()">주문하기</button>
+                <button type="button" class="btn btn-sm btn-light border " onclick="addCart()">장바구니 담기</button>
+                <button type="button" class="btn btn-sm btn-secondary" onclick="order()">주문하기</button>
             </div>
             <div th:unless="${item.itemSellStatus == T(com.shop.constant.ItemSellStatus).SELL}" class="text-right">
                 <button type="button" class="btn btn-danger disabled">품절</button>
