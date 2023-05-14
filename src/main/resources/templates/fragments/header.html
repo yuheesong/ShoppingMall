@@ -3,7 +3,7 @@
         xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <div th:fragment="header">
-    <nav class="navbar navbar-expand-sm bg-warning navbar-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: tan">
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -38,8 +38,8 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" th:action="@{/}" method="get">
-                <input name="searchQuery" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                <input name="searchQuery" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="border-radius: 20px">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit" style="border-radius: 20px">Search</button>
             </form>
         </div>
     </nav>
