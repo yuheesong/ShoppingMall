@@ -15,9 +15,13 @@
 ## 3. 핵심 기능 📱  
 - 로그인 및 회원 가입  
 <img width="70%" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/b9ab2c62-6e48-46f1-b044-9defd917cd95"/>  
-
+  
 - 상품 등록  
+<img width="70%" alt="상품등록" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/e9502781-3594-45f6-b603-101ba956af4b">  
+  
 - 상품 상세 
+<img width="70%" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/72a8a01a-5506-43da-b375-d99b522fb4d4"/>  
+  
 - 상품 관리  
 - 상품 검색
 - 장바구니  
