@@ -14,23 +14,32 @@
 
 ## 3. 핵심 기능 📱  
 - 로그인 및 회원 가입  
-<img width="65%" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/e87b1cc9-eccf-4c6f-97f7-abc0e91df8fd"/>  
+<img width="70%" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/e87b1cc9-eccf-4c6f-97f7-abc0e91df8fd"/>  
   
 - 상품 등록  
-<img width="65%" alt="상품등록" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/e9502781-3594-45f6-b603-101ba956af4b">  
+<img width="70%" alt="상품등록" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/e9502781-3594-45f6-b603-101ba956af4b">  
   
 - 상품 상세 
-<img width="65%" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/72a8a01a-5506-43da-b375-d99b522fb4d4"/>  
+<img width="70%" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/72a8a01a-5506-43da-b375-d99b522fb4d4"/>  
   
 - 상품 관리  
-<img width="65%" alt="상품관리" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/efa1e0fb-9ffd-42c1-803c-89aee679c908">  
+<img width="70%" alt="상품관리" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/efa1e0fb-9ffd-42c1-803c-89aee679c908">  
 
 - 상품 검색  
-<img width="65%" alt="상품검색" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/54fbb7ad-04d6-4c07-8695-9b5300f4ff61">  
+<img width="70%" alt="상품검색" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/54fbb7ad-04d6-4c07-8695-9b5300f4ff61">  
 
 - 장바구니  
-- 주문 내역  
-- 자유게시판 :질문 및 답변    
+<img width="70%" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/8ca25481-f406-4b31-b495-032c17c48448"/>  
+  
+- 상품주문과 주문취소 
+<img width="70%" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/78629b70-66ba-4fbd-bbc3-052ec4f42c1e"/>  
+  
+- 자유게시판   
+<img width="70%" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/d8b55124-31e4-419f-a62c-e21a9970932b"/>   
+  
+- 수정 및 삭제  
+<img width="70%" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/91fe4493-f20c-4697-ba5b-9e829d9825e2"/>  
+  
 
 ## 4. 회고/느낀점 ✔️  
 
