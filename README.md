@@ -14,7 +14,8 @@
 
 ## 3. 핵심 기능 📱  
 - 로그인 및 회원 가입  
-![로그인 영상](https://github.com/yuheesong/ShoppingMall/assets/98306847/b9ab2c62-6e48-46f1-b044-9defd917cd95)
+<img width="70%" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/b9ab2c62-6e48-46f1-b044-9defd917cd95"/>  
+
 - 상품 등록  
 - 상품 상세 
 - 상품 관리  
