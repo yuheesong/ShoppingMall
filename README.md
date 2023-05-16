@@ -43,6 +43,10 @@
   
 
 ## 4. 회고/느낀점 ✔️  
+- 스프링 강의만 n개월동안 듣다가 실제로 프로젝트를 통하여 내가 만들고 싶은 웹사이트를 만들어보니 스프링 프레임워크의 사용법에 대하여 더 친숙해질 수 있게 되었다.   
+- 기본적인 쇼핑몰 웹사이트에 관한 전체적인 동작 프로세스에 대하여 알게 되었다.  
+- 추가적인 기능을 덧붙이고 싶은 마음이 생겼다 (회원 탈퇴, 좋아요기능, aws를 통한 사이트 배포 등등). 추후에 develope할 예정이다.  
+
 
 ## 5. 오류 📌  
 1. com.mysema.codegen.model.Type 오류  
@@ -67,7 +71,7 @@ Thymeleaf Layout Dialect dependency를 pom.xml에 추가한후 footer와 header 
 fetchResults()는 QueryResults를 사용하고, 여기서 count 쿼리를 사용한다.  
 그러나 QueryDsl 5.0.0 버전부터는 fetchResults()와 fetchCount()가 deprecated된다.  
 [해결방법: 카운트할 때 fetchResults() 대신 fetch()를 사용한다. 또한, QueryResults를 List 타입으로 바꿔준다.]  
-  
+
 # 참고  
 1. 깃허브를 이용하여 데이터 파일들을 git의 형상관리 형태로 관리하기  
 AWS 같은 서버 원격 저장소 없이도 데이터를 저장하고 활용할 수 있다.
