@@ -15,6 +15,8 @@
 
 ## 3. 핵심 기능 📱  
 - 로그인 및 회원 가입  
+-처음에 이메일로 가입하도록 구현하였으나 후에 편의성을 위하여 아이디로 로그인 하는 것으로 바꾸었다. 또한, 회원을 이메일로 구별하는 것에서 아이디를 통한 구별로 바꾸었다.    
+-if(findMember != null || findMember2!=null)으로 아이디 or 이메일 하나라도 존재시 이미 존재하는 회원 경고창을 띄웠다.
 <img width="70%" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/e87b1cc9-eccf-4c6f-97f7-abc0e91df8fd"/>  
   
 - 상품 등록  
