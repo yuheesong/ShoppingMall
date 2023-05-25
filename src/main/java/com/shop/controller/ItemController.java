@@ -30,7 +30,7 @@ public class ItemController {
     @GetMapping(value = "/admin/item/new")
     public String itemForm(Model model){
         model.addAttribute("itemFormDto", new ItemFormDto());
-        return "/item/itemForm";
+        return "item/itemForm";
     }
 
     @PostMapping(value = "/admin/item/new")
@@ -65,7 +65,7 @@ public class ItemController {
             return "item/itemForm";
         }
 
-        return "/item/itemForm";
+        return "item/itemForm";
     }
 
     @PostMapping(value = "/admin/item/{itemId}")
@@ -109,6 +109,6 @@ public class ItemController {
 
         ItemFormDto itemFormDto = itemService.getItemDtl(itemId);
         model.addAttribute("item", itemFormDto);
-        return "/item/itemDtl";
+        return "item/itemDtl";
     }
 }
