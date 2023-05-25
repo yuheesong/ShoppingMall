@@ -1,5 +1,6 @@
-# 제목  
-### 설명  
+# 🍞유유의 브레드샵🍞  
+베이커리 쇼핑몰이라는 컨셉과 함께 쇼핑 기능, 쇼핑몰 관리, 자유 커뮤니티 기능을 가진 웹사이트입니다.  
+본 프로젝트는 개인 프로젝트로 진행되었습니다.  
 
 ## 1. 기간 📅  
 2023-04 ~ 2023-05  
@@ -14,15 +15,40 @@
 
 ## 3. 핵심 기능 📱  
 - 로그인 및 회원 가입  
+-처음에 이메일로 가입하도록 구현하였으나 후에 편의성을 위하여 아이디로 로그인 하는 것으로 바꾸었다. 또한, 회원을 이메일로 구별하는 것에서 아이디를 통한 구별로 바꾸었다.    
+-if(findMember != null || findMember2!=null)으로 아이디 or 이메일 하나라도 존재시 이미 존재하는 회원 경고창을 띄웠다.
+<img width="70%" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/e87b1cc9-eccf-4c6f-97f7-abc0e91df8fd"/>  
+  
 - 상품 등록  
+<img width="70%" alt="상품등록" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/e9502781-3594-45f6-b603-101ba956af4b">  
+  
 - 상품 상세 
+<img width="70%" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/72a8a01a-5506-43da-b375-d99b522fb4d4"/>  
+  
 - 상품 관리  
-- 상품 검색
+<img width="70%" alt="상품관리" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/efa1e0fb-9ffd-42c1-803c-89aee679c908">  
+
+- 상품 검색  
+<img width="70%" alt="상품검색" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/54fbb7ad-04d6-4c07-8695-9b5300f4ff61">  
+
 - 장바구니  
-- 주문 내역  
-- 자유게시판 :질문 및 답변    
+<img width="70%" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/8ca25481-f406-4b31-b495-032c17c48448"/>  
+  
+- 상품주문과 주문취소 
+<img width="70%" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/78629b70-66ba-4fbd-bbc3-052ec4f42c1e"/>  
+  
+- 자유게시판   
+<img width="70%" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/d8b55124-31e4-419f-a62c-e21a9970932b"/>   
+  
+- 수정 및 삭제  
+<img width="70%" src="https://github.com/yuheesong/ShoppingMall/assets/98306847/91fe4493-f20c-4697-ba5b-9e829d9825e2"/>  
+  
 
 ## 4. 회고/느낀점 ✔️  
+- 스프링 강의만 n개월동안 듣다가 실제로 프로젝트를 통하여 내가 만들고 싶은 웹사이트를 만들어보니 스프링 프레임워크의 사용법에 대하여 더 친숙해질 수 있게 되었다.   
+- 기본적인 쇼핑몰 웹사이트에 관한 전체적인 동작 프로세스에 대하여 알게 되었다.  
+- 추가적인 기능을 덧붙이고 싶은 마음이 생겼다 (회원 탈퇴, 좋아요기능, aws를 통한 사이트 배포 등등). 추후에 develope할 예정이다.  
+
 
 ## 5. 오류 📌  
 1. com.mysema.codegen.model.Type 오류  
@@ -47,7 +73,7 @@ Thymeleaf Layout Dialect dependency를 pom.xml에 추가한후 footer와 header 
 fetchResults()는 QueryResults를 사용하고, 여기서 count 쿼리를 사용한다.  
 그러나 QueryDsl 5.0.0 버전부터는 fetchResults()와 fetchCount()가 deprecated된다.  
 [해결방법: 카운트할 때 fetchResults() 대신 fetch()를 사용한다. 또한, QueryResults를 List 타입으로 바꿔준다.]  
-  
+
 # 참고  
 1. 깃허브를 이용하여 데이터 파일들을 git의 형상관리 형태로 관리하기  
 AWS 같은 서버 원격 저장소 없이도 데이터를 저장하고 활용할 수 있다.
