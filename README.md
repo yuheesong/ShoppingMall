@@ -1,7 +1,7 @@
 # 🍞유유의 브레드샵🍞  
 베이커리 쇼핑몰이라는 컨셉과 함께 쇼핑 기능, 쇼핑몰 관리, 자유 커뮤니티 기능을 가진 웹사이트입니다.  
 본 프로젝트는 개인 프로젝트로 진행되었습니다.  
-http://13.125.198.44:8080/ (작업중, 2023.05.26)
+http://13.125.198.44:8080/ (+추가: 2023.05.26)
 
 ## 1. 기간 📅  
 2023-04 ~ 2023-05  
@@ -75,6 +75,12 @@ Thymeleaf Layout Dialect dependency를 pom.xml에 추가한후 footer와 header 
 fetchResults()는 QueryResults를 사용하고, 여기서 count 쿼리를 사용한다.  
 그러나 QueryDsl 5.0.0 버전부터는 fetchResults()와 fetchCount()가 deprecated된다.  
 [해결방법: 카운트할 때 fetchResults() 대신 fetch()를 사용한다. 또한, QueryResults를 List 타입으로 바꿔준다.]  
+  
+6. thymeleaf의 template might not exist or might not be accessible by any of the configured Template Resolvers 오류  
+웹 페이지가 로컬에서는 잘 작동하나, AWS를 통하여 웹사이트를 배포할 시 특정 화면들에 접속 할 때 500 에러가 떴다.  
+또한, 위와 같은 오류가 나타났다. 찾아보니 jar파일과 관련된 이슈인 것 같다.  
+[해결방법: controller 파일들의 return 경로에서, 맨 앞이 /로 시작하는 경로들의 /를 삭제해주었더니 올바르게 서버에서도 동작하였다.  
+IDE에서는 return 하는 경로가 /로 시작하여도 잘 동작하나, jar 배포시에는 //로 인식하여 잘 동작하지 않는다고 한다. ]  
 
 # 참고  
 1. 깃허브를 이용하여 데이터 파일들을 git의 형상관리 형태로 관리하기  
